@@ -10,10 +10,12 @@ return new class extends Migration {
      */
     public function up(): void
     {
-        Schema::create('history_chat', function (Blueprint $table) {
+        Schema::create('biodata', function (Blueprint $table) {
             $table->id();
-            $table->string('send_chat', 200);
-            $table->longText('get_chat');
+            $table->string('nama', 100);
+            $table->string('nik', 20);
+            $table->integer('umur');
+            $table->text('alamat');
             $table->timestamps();
         });
     }
@@ -23,6 +25,6 @@ return new class extends Migration {
      */
     public function down(): void
     {
-        Schema::dropIfExists('history_chat');
+        Schema::dropIfExists('biodata');
     }
 };
