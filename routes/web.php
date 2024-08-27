@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\GeminiAIController;
+use App\Http\Controllers\KategoriController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\BiodataController;
 use Illuminate\Support\Facades\Auth;
@@ -36,3 +37,9 @@ Route::group(['prefix' => 'search'], function () {
 // Route::get('/finduser/{id}', [UserController::class, 'findUser']);
 
 Route::resource('biodata', BiodataController::class);
+
+// Route::get('/admin', function () {
+//     return view('admin.kategori');
+// });
+
+Route::get('/admin', [KategoriController::class, 'index']);

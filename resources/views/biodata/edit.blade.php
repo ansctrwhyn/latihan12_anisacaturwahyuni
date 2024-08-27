@@ -24,6 +24,10 @@
                 <label for="alamat" class="form-label">Alamat</label>
                 <input type="text" class="form-control" name="alamat" value="{{ $biodata->alamat }}" required>
             </div>
+            <div class="mb-3">
+                <label for="image" class="form-label">Upload Image</label>
+                <input class="form-control" type="file" name="image">
+            </div>
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
     </div>

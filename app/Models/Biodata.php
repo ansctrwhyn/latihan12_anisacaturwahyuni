@@ -10,6 +10,6 @@ class Biodata extends Model
     use HasFactory;
 
     protected $table = 'biodata';
-    protected $fillable = ['nama', 'nik', 'umur', 'alamat'];
+    protected $fillable = ['nama', 'nik', 'umur', 'alamat', 'image_path'];
     public $timestamps = true;
 }
