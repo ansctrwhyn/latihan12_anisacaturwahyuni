@@ -17,8 +17,11 @@ class AppServiceProvider extends ServiceProvider
     /**
      * Bootstrap any application services.
      */
-    public function boot(): void
+    public function boot()
     {
-        //
+        Schema::defaultStringLength(191);
+        if ($this->app->environment('production')){
+            URL::forceScheme('https');
+        }
     }
 }
